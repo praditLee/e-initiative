@@ -26,15 +26,18 @@
 
     // เช็กสถานะว่าล็อกอินอยู่หรือไม่
     onMount(() => {
-        onAuthStateChanged(auth, (currentUser) => {
+    onAuthStateChanged(auth, (currentUser) => {
+        // เช็กว่าล็อกอินอยู่ และต้อง "ไม่ใช่การล็อกอินแบบไร้ตัวตน" (isAnonymous ต้องเป็น false)
+        if (currentUser && !currentUser.isAnonymous) {
             user = currentUser;
-            if (user) {
-                fetchDocuments(); // ถ้าล็อกอินแล้ว ให้ดึงข้อมูลมาใส่ตารางทันที
-            } else {
-                documents = [];
-            }
-        });
+            fetchDocuments(); 
+        } else {
+            // ถ้าเป็นบัญชีไร้ตัวตนหลงเข้ามา ให้เตะออกไปหน้ากรอกรหัสผ่านแอดมิน
+            user = null;
+            documents = [];
+        }
     });
+});
 
     // ฟังก์ชันล็อกอิน
     async function login() {

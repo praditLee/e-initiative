@@ -12,8 +12,10 @@
     // ค้นหารูปปัจจุบันที่กำลังแสดง
     $: selectedArt = artworks.find(art => art.id === currentId) || artworks[0];
     
-    // สร้าง URL จริงของหน้านี้เพื่อส่งให้ Facebook (แก้โดเมนให้เป็นของจริงด้วยนะครับ)
-    $: currentUrl = `https://ants.actlabthailand.org/share/${currentId}`; 
+    // ดึง URL อัตโนมัติจากเบราว์เซอร์ (เช็ก typeof window เพื่อป้องกัน Error ฝั่ง Server)
+    $: currentUrl = typeof window !== 'undefined' 
+        ? `${window.location.origin}/share/${currentId}` 
+        : `https://e-initiative.pages.dev/share/${currentId}`;
     const shareText = "ฉันขอประกาศจุดยืน ไม่เอาด้วยกับการร่างรัฐธรรมนูญที่ไม่ใส่ใจเสียงของประชาชน!";
 </script>
 

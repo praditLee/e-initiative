@@ -10,8 +10,8 @@ import { countSubmittedDocuments } from '../../utils/firebase';
 import { countOfflineSignatures } from '../../utils/sheets';
 import Sharer from '../Sharer.svelte';
 
-const documentCount =
-	(await countSubmittedDocuments()) 
+// const documentCount =
+// 	(await countSubmittedDocuments()) 
 	// +
 	// (Config.sheets?.enableOfflineSignature ? await countOfflineSignatures() : 0);
 ---
@@ -38,7 +38,7 @@ const documentCount =
 		<div class="flex flex-col gap-2">
 			<div>
 				<p class="heading-responsive-02">
-					ลงแล้ว {documentCount.toLocaleString()} คน
+    				ลงแล้ว <span id="realtime-count">...</span> คน
 				</p>
 				<p>
 					{dayElapsed > 0 && <>เหลือเวลาอีก {dayElapsed} วัน</>}
@@ -99,3 +99,26 @@ const documentCount =
 		</div>
 	</div>
 </SectionContainer>
+<script>
+    import { countSubmittedDocuments } from '../../utils/firebase';
+
+    // ฟังก์ชันนี้จะทำงานบนเบราว์เซอร์ของผู้ใช้
+    async function fetchRealtimeCount() {
+        try {
+            const count = await countSubmittedDocuments();
+            const countElement = document.getElementById('realtime-count');
+            
+            if (countElement) {
+                // ใส่ลูกน้ำให้ตัวเลขดูอ่านง่าย (เช่น 1,000)
+                countElement.innerText = count.toLocaleString(); 
+            }
+        } catch (error) {
+            console.error("ไม่สามารถดึงยอดผู้ลงชื่อได้:", error);
+            const countElement = document.getElementById('realtime-count');
+            if (countElement) countElement.innerText = "0";
+        }
+    }
+
+    // สั่งให้ฟังก์ชันทำงานทันทีที่โหลดหน้าเว็บ
+    fetchRealtimeCount();
+</script>

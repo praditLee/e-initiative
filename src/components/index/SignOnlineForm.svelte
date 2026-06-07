@@ -301,18 +301,28 @@
 </form>
 
 <dialog bind:this={successDialog} class="modal modal-bottom sm:modal-middle">
-	<form method="dialog" class="modal-box flex flex-col">
-		<div class="flex flex-row items-center justify-center gap-1">
-			<span class="text-success text-lg"><CheckmarkIcon /></span>
-			<span class="text-lg font-bold">ลงชื่อสำเร็จ!</span>
-		</div>
-		<button 
+    <!-- เพิ่ม gap-4 เพื่อให้มีระยะห่างระหว่างข้อความกับปุ่ม -->
+    <form method="dialog" class="modal-box flex flex-col gap-4">
+        <div class="flex flex-row items-center justify-center gap-1 mt-2">
+            <span class="text-success text-lg"><CheckmarkIcon /></span>
+            <span class="text-lg font-bold">ลงชื่อสำเร็จ!</span>
+        </div>
+        
+        <!-- นำปุ่มทั้งสองมารวมเป็นกลุ่มเดียวกันและใส่ gap-2 -->
+        <div class="flex flex-col gap-2 mt-2">
+            <button 
                 class="btn btn-primary btn-block text-lg" 
                 on:click={() => window.location.href = '/share/1'}
             >
                 คลิกเพื่อไปรับภาพประกาศจุดยืน!
-         </button>
-	</form>
+            </button>
+            
+            <!-- ปุ่มปิดหน้าต่างที่เราเพิ่มเข้าไปใหม่ -->
+            <button class="btn btn-ghost btn-block text-base text-gray-500 hover:bg-base-200">
+                ปิด
+            </button>
+        </div>
+    </form>
 </dialog>
 
 <dialog bind:this={errorDialog} class="modal modal-bottom sm:modal-middle">
