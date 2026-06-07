@@ -21,7 +21,7 @@ try {
 	app = initializeApp(JSON.parse(getEnv('PUBLIC_FIREBASE_CONFIG') || '{}'));
 }
 
-const auth = getAuth();
+const auth = getAuth(app);
 const functions = getFunctions(app);
 
 if (import.meta.env?.DEV || process.env?.NODE_ENV === 'development') {

@@ -3,8 +3,8 @@ export default {
 	metadata: {
 		title: 'ANTS - ร่างรัฐธรรมนูญประชาชน',
 		description: 'กองทัพมดเดินหน้าร่างรัฐธรรมนูญประชาชน',
-		siteUrl: 'https://wevisdemo.github.io/e-initiative-template',
-		previewImageUrl: 'https://wevisdemo.github.io/e-initiative-template/og.png',
+		siteUrl: 'https://e-initiative.pages.dev',
+		previewImageUrl: 'https://e-initiative.pages.dev/og.png',
 	},
 	petition: {
 		endDate: new Date('2026-06-30 GMT+7'),

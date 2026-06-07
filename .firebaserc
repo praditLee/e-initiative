@@ -1,6 +1,5 @@
 {
 	"projects": {
-		"default": "demo-e-initiative-template",
-		"prod": "e-initiative-template"
+		"default": "ants-898cf"
 	}
 }
