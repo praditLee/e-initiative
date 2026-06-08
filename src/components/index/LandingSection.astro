@@ -59,14 +59,37 @@ import Sharer from '../Sharer.svelte';
 					</div>
 				) : (
 					<div class="space-y-2">
+			
 						<a
 							href="#sign"
 							class="heading-03 btn btn-primary btn-block text-base-100"
 						>
-							ลงชื่อเลย
+							ลงชื่อประกาศเจตนารมณ์
 							<PenIcon />
 						</a>
-						{/* {Config.sheets?.enableLocations && (
+						<a
+							href="#sign"
+							class="heading-03 btn btn-block bg-blue-500 text-base-100"
+						>
+							ร่วมลงชื่อเพื่อเสนอร่างฯ ประชาชน
+							<PenIcon />
+						</a>
+						<div class="flex flex-col gap-2 md:flex-row max-w-md mx-auto">
+							<a
+								href="#sign"
+								class="heading-04 btn btn-primary w-full md:w-1/2 text-base-100"
+							>
+								ดูรูปงานปฏิบัติการ
+							</a>
+							<a
+								href="#sign"
+								class="heading-04 btn btn-primary w-full md:w-1/2 text-sm"
+							>
+								ดูร่างข้อเสนอแก้ไข รธน.
+							</a>
+						</div>
+						
+						{Config.sheets?.enableLocations && (
 							<a
 								href="locations"
 								class="heading-03 btn btn-secondary btn-block"
@@ -74,8 +97,8 @@ import Sharer from '../Sharer.svelte';
 								ดูสถานที่ลงชื่อ
 								<LocationIcon />
 							</a>
-						)} */}
-						{/* {Config.petition.offline?.volunteer && (
+						)} 
+						{Config.petition.offline?.volunteer && (
 							<a
 								href="#volunteer"
 								class="heading-03 btn btn-secondary btn-block"
@@ -83,7 +106,7 @@ import Sharer from '../Sharer.svelte';
 								อาสาล่ารายชื่อ
 								<TableIcon />
 							</a>
-						)} */}
+						)}
 					</div>
 				)
 			}

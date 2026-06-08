@@ -37,7 +37,7 @@
             documents = [];
         }
     });
-});
+    });
 
     // ฟังก์ชันล็อกอิน
     async function login() {
