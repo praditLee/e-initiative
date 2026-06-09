@@ -42,14 +42,15 @@ export default {
 			info: '#FFDE59',
 		},
 		fonts: {
-			body: 'IBM Plex Sans Thai Looped',
-			'heading-fixed': 'IBM Plex Sans Thai',
-			'heading-responsive': 'IBM Plex Sans Thai Looped',
-			link: 'IBM Plex Sans Thai Looped',
-		},
-		stylesheets: [
-			'https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Thai:wght@100..900&display=swap',
-		],
+        body: 'IBM Plex Sans Thai Looped',
+        'heading-fixed': 'IBM Plex Sans Thai',
+        'heading-responsive': 'IBM Plex Sans Thai Looped',
+        link: 'IBM Plex Sans Thai Looped',
+    },
+    stylesheets: [
+        // ลิงก์ใหม่สำหรับโหลดฟอนต์ IBM Plex Sans Thai และแบบ Looped (น้ำหนัก 100-700)
+        'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&display=swap',
+    ],
 	},
 	sheets: {
 		id: '1hOGxvoIOJxUFYU1WsI39hOXeuKSAENpNZHXxHipeHJA',

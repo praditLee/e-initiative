@@ -104,15 +104,18 @@ import Sharer from '../Sharer.svelte';
 				)
 			}
 		</div>
-		<div class="flex flex-row items-center gap-2 wrap justify-center">
-				
-			<a href="#why" class="heading-03 btn btn-link  hover:text-accent"
-				>ทำไมต้องประกาศเจตนารมย์</a
-			>|
-			<a href="/word" target="_blank" class="heading-03 btn btn-link  hover:text-accent"
-				>ดูคำประกาศกองทัพมด</a
-			>
-		</div>
+		<div class="flex flex-col sm:flex-row w-full items-center justify-center gap-0 sm:gap-2">
+    
+    <a href="#why" class="heading-03 btn btn-link hover:text-accent px-2"
+        >ทำไมต้องประกาศเจตนารมย์</a
+    >
+    
+    <span class="hidden sm:inline text-gray-500">|</span>
+    
+    <a href="/word" target="_blank" class="heading-03 btn btn-link hover:text-accent px-2"
+        >ดูคำประกาศกองทัพมด</a
+    >
+</div>
 		
 
 		<div class="flex items-center justify-center gap-3 text-primary">
