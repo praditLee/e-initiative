@@ -5,7 +5,11 @@ import SectionContainer from '../SectionContainer.astro';
 import StepBlock from './StepBlock.svelte';
 import HeadquarterMap from './HeadquarterMap.svelte';
 import PostAddress from './PostAddress.svelte';
+import GalleryGrid from '../GalleryGrid.svelte';
 
+// สแกนหารูปและ PDF ในโฟลเดอร์เหมือนเดิม
+const files = import.meta.glob('/public/medias/*.{png,jpg,jpeg,webp,pdf}', { eager: true });
+const fileUrls = Object.keys(files).map(path => path.replace('/public', ''));
 ---
 
 <SectionContainer
@@ -27,24 +31,27 @@ import PostAddress from './PostAddress.svelte';
 		</StepBlock>
 		<StepBlock>
 			<Fragment slot="heading"
-				>2. ดาวน์โหลดแบบฟอร์ม และพิมพ์ลงกระดาษ A4</Fragment
+				>2. ดาวน์โหลดสื่อรณรงค์</Fragment
 			>
 			<p>
-				การเข้าชื่อไม่ต้องถ่ายสำเนาบัตรประชาชน ลงเพียงแค่ชื่อ-นามสกุล
-				เลขบัตรประชาชน และเซ็น
+				เราเตรียมสื่อรณรงค์ไว้ให้แล้ว ไม่ว่าจะเป็นโปสเตอร์ โลโก้ หรืออื่นๆ เพื่อให้คุณนำไปใช้ประกาศจุดยืนได้อย่างภาคภูมิใจ
+				และถ้าคุณมีไอเดียอยากทำสื่อรณรงค์แบบไหนขึ้นมาเอง ก็สามารถดาวน์โหลดโลโก้ของเราไปใช้ได้เช่นกัน!
 			</p>
-			<img
-				class="mx-auto"
-				src={Config.petition.offline?.formExampleImageUrl}
-				alt=""
+			<div class="divider h-20" />
+			<GalleryGrid 
+				items={fileUrls} 
+				limit={6} 
+				random={true} 
+				client:load 
 			/>
-			<a
+			<div class="h-20" />
+			<!-- <a
 				href={Config.petition.offline?.formUrl}
 				target="_blank"
 				rel="noopener noreferrer"
 				class="btn btn-primary btn-block text-base-100"
 				>ดาวน์โหลดแบบฟอร์ม <DocumentIcon /></a
-			>
+			> -->
 			{
 				Config.petition.offline?.volunteer?.assetsUrl && (
 					<a
@@ -53,7 +60,7 @@ import PostAddress from './PostAddress.svelte';
 						rel="noopener noreferrer"
 						class="btn btn-primary btn-outline btn-block"
 					>
-						ดาวน์โหลดโปสเตอร์และโลโก้{' '}
+						ดาวน์โหลดโปสเตอร์และโลโก้ทั้งหมด{' '}
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
 							<path
 								d="M2 11H1V2C1.0003 1.73488 1.10576 1.4807 1.29323 1.29323C1.4807 1.10576 1.73488 1.0003 2 1H11V2H2V11Z"
@@ -72,7 +79,7 @@ import PostAddress from './PostAddress.svelte';
 				)
 			}
 		</StepBlock>
-		<StepBlock>
+		<!-- <StepBlock>
 			<Fragment slot="heading"
 				>3. ส่งเอกสารรวบรวมรายชื่อมายัง {
 					Config.petition.offline?.headquarter.name
@@ -93,6 +100,7 @@ import PostAddress from './PostAddress.svelte';
 				<p>3.2. ส่งไปรษณีย์</p>
 				<PostAddress />
 			</div>
+
 		</StepBlock>
 		<StepBlock>
 			<Fragment slot="heading">4.หากมีคำถามหรือสงสัย ติดต่อสอบถามผ่าน</Fragment>
@@ -103,6 +111,6 @@ import PostAddress from './PostAddress.svelte';
 				class="btn btn-secondary btn-block"
 				>{Config.petition.offline?.volunteer?.contact.name}</a
 			>
-		</StepBlock>
+		</StepBlock> -->
 	</div>
 </SectionContainer>

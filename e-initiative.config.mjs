@@ -20,7 +20,7 @@ export default {
 			},
 			volunteer: {
 				registrationFormUrl: '#volunteer-register',
-				assetsUrl: '#asset',
+				assetsUrl: '/share/1',
 				contact: {
 					name: 'ชื่อช่องทาง',
 					url: '#contact',

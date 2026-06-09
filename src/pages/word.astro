@@ -1,8 +1,16 @@
 ---
 import Layout from '../layouts/Body.astro';
+import BackHomeLink from '../components/BackHomeLink.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import DocumentIcon from '../components/icons/DocumentIcon.svelte';
 ---
-<Layout title="คำประกาศเจตนารมย์" description="กองทัพมดเดินหน้าร่างรัฐธรรมนูญประชาชน" image="/images/word/word-og-image.png">
-<article class="max-w-5xl mx-auto bg-white rounded-3xl shadow-md border border-slate-100 overflow-hidden">
+<Layout title="คำประกาศเจตนารมย์" description="กองทัพมดเดินหน้าร่างรัฐธรรมนูญประชาชน" image="/images/where-people.png">
+  <SectionContainer
+		outerClass="relative"
+		innerClass="flex w-full max-w-screen-md flex-col gap-8"
+	>
+  <BackHomeLink class="absolute left-1 top-3" />
+<article class="max-w-5xl mx-auto bg-white  rounded-3xl shadow-md border border-slate-100 overflow-hidden">
     
     <div class="h-2 bg-red-600 w-full"></div>
 
@@ -43,7 +51,13 @@ import Layout from '../layouts/Body.astro';
           <p>
             พวกเขาสร้างข้ออ้าง “ศักดิ์และสิทธิ์ของกฎหมายสูงสุด” มาบิดพลิ้วเจตจำนงของประชาชน 21 ล้านเสียงที่โหวตเห็นชอบให้จัดทำรัฐธรรมนูญใหม่ เพียงเพื่อเอื้อประโยชน์ให้กับคนหยิบมือเดียว
           </p>
+          <img
+          class="w-full object-cover"
+          src="/medias/paan_blank.png"
+          alt="ภาพประกอบ: ประชาชนอยู่ตรงไหนในกระบวนการนี้"
+        />
         </div>
+        
 
         <div class="space-y-6 md:border-l md:border-slate-100 md:pl-12">
           <p>
@@ -90,4 +104,6 @@ import Layout from '../layouts/Body.astro';
 
     </div>
   </article>
+  <a href="https://drive.google.com/file/d/1E054rCU47C6PsYL39lt6DYlvz6qIP89e/view?usp=sharing" class="btn btn-primary btn-block mt-8">ดาวน์โหลดคำประกาศ <DocumentIcon /></a>
+  </SectionContainer>
   </Layout>
