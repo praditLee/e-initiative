@@ -65,7 +65,7 @@
             <div class="card bg-yellow-100 shadow-md border hover:shadow-lg transition-shadow mb-6 break-inside-avoid overflow-hidden">
                 
                 <figure 
-                    class="relative w-full bg-yellow-200 cursor-pointer group"
+                    class="relative w-full bg-checkerboard cursor-pointer group"
                     on:click={() => openModal(card)}
                 >
                     {#if card.previewSrc}
@@ -108,7 +108,7 @@
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 z-30 text-gray-800 bg-white bg-opacity-70 hover:bg-opacity-100 shadow-sm border border-gray-200">✕</button>
                 </form>
                 
-                <div class="w-full bg-yellow-100 flex justify-center items-center relative" style="max-height: 75vh;">
+                <div class="w-full bg-checkerboard flex justify-center items-center relative" style="max-height: 75vh;">
                     {#if selectedCard.previewSrc}
                         <img src={selectedCard.previewSrc} class="max-w-full max-h-[75vh] object-contain" alt={selectedCard.name} />
                     {:else}
