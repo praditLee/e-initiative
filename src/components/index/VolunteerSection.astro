@@ -6,6 +6,7 @@ import StepBlock from './StepBlock.svelte';
 import HeadquarterMap from './HeadquarterMap.svelte';
 import PostAddress from './PostAddress.svelte';
 import GalleryGrid from '../GalleryGrid.svelte';
+import SocialFeedList from '../SocialFeedList.svelte';
 
 // สแกนหารูปและ PDF ในโฟลเดอร์เหมือนเดิม
 const files = import.meta.glob('/public/medias/*.{png,jpg,jpeg,webp,pdf}', { eager: true });
@@ -19,7 +20,7 @@ const fileUrls = Object.keys(files).map(path => path.replace('/public', ''));
 	<h2 class="heading-responsive-02 text-center">อาสาปฎิบัติการ</h2>
 
 	<div class="flex w-full flex-col divide-y">
-		<StepBlock class="pt-0">
+		<!-- <StepBlock class="pt-0">
 			<Fragment slot="heading">1. ลงทะเบียน</Fragment>
 			<a
 				href={Config.petition.offline?.volunteer?.registrationFormUrl}
@@ -28,10 +29,10 @@ const fileUrls = Object.keys(files).map(path => path.replace('/public', ''));
 				class="btn btn-primary btn-block text-base-100"
 				>Google Form <DocumentIcon /></a
 			>
-		</StepBlock>
+		</StepBlock> -->
 		<StepBlock>
 			<Fragment slot="heading"
-				>2. ดาวน์โหลดสื่อรณรงค์</Fragment
+				>ดาวน์โหลดสื่อรณรงค์</Fragment
 			>
 			<p>
 				เราเตรียมสื่อรณรงค์ไว้ให้แล้ว ไม่ว่าจะเป็นโปสเตอร์ โลโก้ หรืออื่นๆ เพื่อให้คุณนำไปใช้ประกาศจุดยืนได้อย่างภาคภูมิใจ
@@ -112,5 +113,10 @@ const fileUrls = Object.keys(files).map(path => path.replace('/public', ''));
 				>{Config.petition.offline?.volunteer?.contact.name}</a
 			>
 		</StepBlock> -->
+		<StepBlock>
+			<Fragment slot="heading">ความเคลื่อนไหว</Fragment>
+			<SocialFeedList client:visible />
+		</StepBlock>
+	</div>
 	</div>
 </SectionContainer>

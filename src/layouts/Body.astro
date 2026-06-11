@@ -3,6 +3,7 @@ import Config from '../../e-initiative.config.mjs';
 import '../styles/global.css';
 import '../styles/typography.css';
 import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.svelte';
 interface Props {
 	title?: string;
 	description?: string;
@@ -46,6 +47,23 @@ const { image = '/default-share-image.jpg' } = Astro.props;
 			src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
 			async
 			defer></script>
+		<!-- 1. ตั้งค่าเริ่มต้นให้ "ปิด" การเก็บสถิติ (Analytics Storage = Denied) -->
+			<script is:inline>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				
+				// บังคับปิดคุกกี้สถิติก่อนเป็นค่าเริ่มต้น
+				gtag('consent', 'default', {
+					'ad_storage': 'denied',
+					'analytics_storage': 'denied'
+				});
+			</script>
+		<!-- 2. Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-535V39Z0LR" is:inline></script>
+			<script is:inline>
+			gtag('js', new Date());
+			gtag('config', 'G-535V39Z0LR');
+			</script>
 	</head>
 	<body class="flex min-h-screen flex-col">
 		<main class="body-02 flex-1">
@@ -53,5 +71,6 @@ const { image = '/default-share-image.jpg' } = Astro.props;
 		</main>
 		<Footer />
 		<slot name="after-footer" />
+		<CookieConsent client:load />
 	</body>
 </html>
