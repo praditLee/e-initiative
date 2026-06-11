@@ -3,8 +3,8 @@ export default {
 	metadata: {
 		title: 'ANTS - ร่างรัฐธรรมนูญประชาชน',
 		description: 'กองทัพมดเดินหน้าร่างรัฐธรรมนูญประชาชน',
-		siteUrl: 'https://e-initiative.pages.dev',
-		previewImageUrl: 'https://e-initiative.pages.dev/og.png',
+		siteUrl: 'https://action.actlabthailand.org',
+		previewImageUrl: 'https://action.actlabthailand.org/og.png',
 	},
 	petition: {
 		endDate: new Date('2026-06-30 GMT+7'),
