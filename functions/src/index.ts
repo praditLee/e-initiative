@@ -8,13 +8,12 @@ initializeApp();
 
 interface FormDocument {
 	location: string;
-	// citizenId: string;
 	prefix: string;
 	firstname: string;
 	lastname: string;
-	// signature: string;
 	email?: string; 
     phone?: string;
+	comment?: string;
 }
 
 interface SubmitRequest {
@@ -153,7 +152,7 @@ export const syncToGoogleSheets = onCall(async (request) => {
     });
 
     // 3. เตรียมข้อมูลเป็นแถวๆ สำหรับลงตาราง
-    const rows = [['คำนำหน้า', 'ชื่อ', 'นามสกุล', 'อีเมล', 'เบอร์โทรศัพท์', 'จังหวัด']]; // หัวข้อตาราง
+    const rows = [['คำนำหน้า', 'ชื่อ', 'นามสกุล', 'อีเมล', 'เบอร์โทรศัพท์', 'จังหวัด', 'ความคิดเห็น']]; // หัวข้อตาราง
     uniqueRecords.forEach((data) => {
         rows.push([
             data.prefix || '',
@@ -161,7 +160,8 @@ export const syncToGoogleSheets = onCall(async (request) => {
             data.lastname || '',
             data.email || '',
             data.phone || '',
-            data.location || ''
+            data.location || '',
+			data.comment || '',
         ]);
     });
 

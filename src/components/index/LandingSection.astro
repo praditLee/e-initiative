@@ -24,7 +24,7 @@ import Sharer from '../Sharer.svelte';
 	<div class="flex flex-col items-center justify-center">
 		<h1 class="heading-responsive-02">"โหวตโน"</h1>
 		<h2 class="text-xl font-bold text-primary">
-			ไม่รับกับ สสร. ที่เราไม่ได้เลือก
+			ไม่รับ สสร. ที่เราไม่ได้เลือก
 		</h2>
 		<img
 			class="mt-4 w-[400px] md:w-[600px]"
@@ -33,23 +33,23 @@ import Sharer from '../Sharer.svelte';
 		/>
 	</div>
 	<div class="my-auto flex w-full max-w-md flex-col space-y-2">
-		<p class="mt-1">
+		<!-- <p class="mt-1">
 			ต้องการ {Config.petition.expectedSignatures.toLocaleString()} รายชื่อ
-		</p>
+		</p> -->
 
 		<div class="flex flex-col gap-2">
 			<div>
 				<p class="heading-responsive-01">
-    			ประกาศเจตนารมณ์แล้ว<br /> <span id="realtime-count" class="font-bold text-5xl">...</span> คน
+    			พร้อมโหวตโนแล้ว<br /> <span id="realtime-count" class="font-bold text-5xl">...</span> คน
 				</p>
-				<p>
-					{dayElapsed > 0 && <>เหลือเวลาอีก {dayElapsed} วัน</>}
-					(ภายใน {
-						Config.petition.endDate.toLocaleDateString('TH-th', {
-							dateStyle: 'medium',
+					<!-- <p>
+						{dayElapsed > 0 && <>เหลือเวลาอีก {dayElapsed} วัน</>}
+						(ภายใน {
+							Config.petition.endDate.toLocaleDateString('TH-th', {
+								dateStyle: 'medium',
+							})
 						})
-					})
-				</p>
+					</p> -->
 			</div>
 			<UpdateTimestamp client:load date={new Date()} />
 			{
@@ -64,7 +64,7 @@ import Sharer from '../Sharer.svelte';
 							href="#sign"
 							class="heading-03 btn btn-primary btn-block text-base-100"
 						>
-							ลงชื่อประกาศเจตนารมณ์
+							ลงชื่อร่วมแสดงจุดยืน
 							<PenIcon />
 						</a>
 						<div class="divider" />
@@ -72,9 +72,9 @@ import Sharer from '../Sharer.svelte';
 						<a
 							href="https://conforall.com/"
 							target="_blank"
-							class="heading-03 btn btn-block bg-[#30C661] text-[#F8EB52] border border-black hover:bg-green-600"
+							class="heading-03 btn btn-block bg-[#30D36C] text-[#2301A4] border border-black hover:bg-green-600"
 						>
-							ร่วมลงชื่อเพื่อเสนอร่างฯ ประชาชน
+							ร่วมลงชื่อเสนอร่างรัฐธรรมนูญประชาชน
 							<img
 								src="/images/star_icon.png"
 								alt="ConForAll Logo"
@@ -96,7 +96,7 @@ import Sharer from '../Sharer.svelte';
 								href="#volunteer"
 								class="heading-03 btn btn-secondary btn-block"
 							>
-								ร่วมเป็นอาสาปฎิบัติการ
+								ร่วมทำให้รัฐธรรมนูญอยู่ในชีวิตประจำวัน
 								<TableIcon />
 							</a>
 						)}
@@ -107,13 +107,13 @@ import Sharer from '../Sharer.svelte';
 		<div class="flex flex-col sm:flex-row w-full items-center justify-center gap-0 sm:gap-2">
     
     <a href="#why" class="heading-03 btn btn-link hover:text-accent px-2"
-        >ทำไมต้องประกาศเจตนารมย์</a
+        >ทำไมต้องแสดงจุดยืน</a
     >
     
     <span class="hidden sm:inline text-gray-500">|</span>
     
     <a href="/word" target="_blank" class="heading-03 btn btn-link hover:text-accent px-2"
-        >ดูคำประกาศกองทัพมด</a
+        >คำประกาศกองทัพมด</a
     >
 </div>
 		

@@ -17,51 +17,20 @@ const fileUrls = Object.keys(files).map(path => path.replace('/public', ''));
 	id="volunteer"
 	innerClass="flex w-full max-w-screen-md flex-col items-center gap-8"
 >
-	<h2 class="heading-responsive-02 text-center">อาสาปฎิบัติการ</h2>
+	<h2 class="heading-responsive-01 text-center">ร่วมทำให้รัฐธรรมนูญอยู่ในชีวิตประจำวัน</h2>
+	<h2 class="heading-responsive-02 text-center">กองทัพมดร่วมปฏิบัติการ</h2>
 
 	<div class="flex w-full flex-col divide-y">
-		<!-- <StepBlock class="pt-0">
-			<Fragment slot="heading">1. ลงทะเบียน</Fragment>
-			<a
-				href={Config.petition.offline?.volunteer?.registrationFormUrl}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="btn btn-primary btn-block text-base-100"
-				>Google Form <DocumentIcon /></a
-			>
-		</StepBlock> -->
 		<StepBlock>
-			<Fragment slot="heading"
-				>ดาวน์โหลดสื่อรณรงค์</Fragment
-			>
-			<p>
-				เราเตรียมสื่อรณรงค์ไว้ให้แล้ว ไม่ว่าจะเป็นโปสเตอร์ โลโก้ หรืออื่นๆ เพื่อให้คุณนำไปใช้ประกาศจุดยืนได้อย่างภาคภูมิใจ
-				และถ้าคุณมีไอเดียอยากทำสื่อรณรงค์แบบไหนขึ้นมาเอง ก็สามารถดาวน์โหลดโลโก้ของเราไปใช้ได้เช่นกัน!
-			</p>
-			<div class="divider h-20" />
-			<GalleryGrid 
-				items={fileUrls} 
-				limit={6} 
-				random={true} 
-				client:load 
-			/>
-			<div class="h-20" />
-			<!-- <a
-				href={Config.petition.offline?.formUrl}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="btn btn-primary btn-block text-base-100"
-				>ดาวน์โหลดแบบฟอร์ม <DocumentIcon /></a
-			> -->
 			{
 				Config.petition.offline?.volunteer?.assetsUrl && (
 					<a
 						href={Config.petition.offline.volunteer.assetsUrl}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="btn btn-primary btn-outline btn-block"
+						class="btn btn-primary btn-outline btn-block heading-02"
 					>
-						ดาวน์โหลดโปสเตอร์และโลโก้ทั้งหมด{' '}
+						ดาวน์โหลดเครื่องมือปฏิบัติการได้ที่นี่{' '}
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
 							<path
 								d="M2 11H1V2C1.0003 1.73488 1.10576 1.4807 1.29323 1.29323C1.4807 1.10576 1.73488 1.0003 2 1H11V2H2V11Z"
@@ -80,42 +49,30 @@ const fileUrls = Object.keys(files).map(path => path.replace('/public', ''));
 				)
 			}
 		</StepBlock>
-		<!-- <StepBlock>
-			<Fragment slot="heading"
-				>3. ส่งเอกสารรวบรวมรายชื่อมายัง {
-					Config.petition.offline?.headquarter.name
-				}
-				<span class="text-error"
-					>ภายในวันที่ {
-						Config.petition.endDate.toLocaleDateString('TH-th', {
-							dateStyle: 'medium',
-						})
-					}</span
-				></Fragment
+		<StepBlock>
+			<Fragment slot="heading">เล่าเรื่องปฏิบัติการของคุณให้เราฟัง</Fragment>
+			<a
+				href={Config.petition.offline?.volunteer?.registrationFormUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="btn btn-primary btn-block text-base-100"
+				>Google Form <DocumentIcon /></a
 			>
-			<div class="space-y-2">
-				<p>3.1. นำส่งด้วยตัวเอง</p>
-				<HeadquarterMap />
-			</div>
-			<div class="space-y-2">
-				<p>3.2. ส่งไปรษณีย์</p>
-				<PostAddress />
-			</div>
-
+		</StepBlock>
+		
+		<StepBlock>
+			<Fragment slot="heading">ความเคลื่อนไหว</Fragment>
+			<SocialFeedList client:visible />
 		</StepBlock>
 		<StepBlock>
-			<Fragment slot="heading">4.หากมีคำถามหรือสงสัย ติดต่อสอบถามผ่าน</Fragment>
+			<Fragment slot="heading">มีคำถามหรือสงสัย หรือร่วมแชร์ลิงก์กิจกรรม ติดต่อเราผ่าน...</Fragment>
 			<a
 				href={Config.petition.offline?.volunteer?.contact.url}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="btn btn-secondary btn-block"
+				class="btn btn-primary btn-block"
 				>{Config.petition.offline?.volunteer?.contact.name}</a
 			>
-		</StepBlock> -->
-		<StepBlock>
-			<Fragment slot="heading">ความเคลื่อนไหว</Fragment>
-			<SocialFeedList client:visible />
 		</StepBlock>
 	</div>
 	</div>

@@ -31,7 +31,24 @@ import VolunteerSection from '../components/index/VolunteerSection.astro';
 		<ConstSituation />
 		<ProposalOverview />
 		<ProposalTable />
-		<ConstTimeline />
+		<section
+			class="relative w-full h-[400px] bg-scroll md:bg-fixed bg-center bg-cover flex items-center justify-center"
+			style="background-image: url('/images/question.webp');"
+			>
+			<div class="absolute inset-0 bg-black/50"></div>
+
+			<div class="relative z-10 text-center px-6">
+				<h3 class="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg">ประชาชนอยู่ตรงไหนในกระบวนการนี้?</h3>
+				<h2
+				class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg"
+				>
+				
+				คุณพร้อมหรือยังกับประชามติครั้งที่ 2
+				</h2>
+			</div>
+		</section>
+		
+	
 		<AboutSection />
 	</div>
 	<Navbar slot="after-footer" client:idle />

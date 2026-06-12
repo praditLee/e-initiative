@@ -7,7 +7,7 @@ export default {
 		previewImageUrl: 'https://action.actlabthailand.org/og.png',
 	},
 	petition: {
-		endDate: new Date('2026-06-30 GMT+7'),
+		endDate: new Date('2026-12-31 GMT+7'),
 		expectedSignatures: 50000,
 		offline: {
 			formUrl: 'petition-form.pdf',
@@ -22,8 +22,8 @@ export default {
 				registrationFormUrl: '#volunteer-register',
 				assetsUrl: '/share/1',
 				contact: {
-					name: 'ชื่อช่องทาง',
-					url: '#contact',
+					name: 'ActLab Thailand',
+					url: 'https://www.facebook.com/ActLabThailand',
 				},
 			},
 		},

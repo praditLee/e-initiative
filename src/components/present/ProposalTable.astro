@@ -1,61 +1,196 @@
 ---
-
 ---
 
-<div class="bg-gray-50  py-16 rounded-xl shadow-sm border border-base-300 mt-0">
-    <h2 class="text-lg md:text-xl text-center font-bold mb-6 border-b pb-2">เปรียบเทียบร่างข้อเสนอแบบเจาะลึก</h2>
+<div class="bg-[#E9AF13] py-12 relative overflow-hidden">
+    <img src="/images/parliament-bg.png" class="absolute w-full/10 h-full mt-50 mr-200 opacity-10 z-0 pointer-events-none" alt="background watermark" />
+    <img src="/images/compare_h.png" class="mx-auto mb-6 max-w-[90%] drop-shadow-md" alt="เปรียบเทียบร่างข้อเสนอ" />
+
+    <div class="flex items-center justify-center text-white mb-4 animate-pulse md:hidden">
+        <span class="text-2xl mr-2">👈</span>
+        <span class="font-bold">ปัดซ้าย-ขวา เพื่อดูข้อเสนอแต่ละพรรค</span>
+        <span class="text-2xl ml-2">👉</span>
+    </div>
+
+    <div class="w-full overflow-x-auto relative z-10 snap-x snap-mandatory hide-scrollbar pb-8 pr-2 md:pr-8 pl-0" style="scroll-padding-left: 125px;">
+        
+        <div class="grid grid-cols-[115px_repeat(6,220px)] md:grid-cols-[150px_repeat(6,200px)] gap-x-2 gap-y-0 w-max mx-auto items-stretch">            
+            <div class="sticky left-0 z-30  flex items-end pb-2"></div>
+            
+            <div class="bg-[#284D80]/90 text-white rounded-t-3xl p-4 flex flex-col items-center justify-end font-bold text-lg snap-start shadow-[0_-5px_15px_rgba(0,0,0,0.1)] relative z-10">
+                <img src="/images/blue-party-logo.png" alt="พรรคภูมิใจไทย" class="h-10 md:h-20 object-contain pt-2" onerror="this.style.display='none'" />
+            </div>
+            <div class="bg-[#0097B2]/80 text-white rounded-t-3xl p-4 flex flex-col items-center justify-end font-bold text-lg snap-start shadow-[0_-5px_15px_rgba(0,0,0,0.1)] relative z-10">
+                <img src="/images/pachatipat-party-logo.png" alt="พรรคประชาธิปัตย์" class="h-10 md:h-20 object-contain pt-2" onerror="this.style.display='none'" />
+            </div>
+            <div class="bg-red-600 text-white rounded-t-3xl p-4 flex flex-col items-center justify-end font-bold text-lg snap-start shadow-[0_-5px_15px_rgba(0,0,0,0.1)] relative z-10">
+                <img src="/images/pthai-party-logo.png" alt="พรรคเพื่อไทย" class="h-10 md:h-12 pb-2 object-contain" onerror="this.style.display='none'" />
+            </div>
+            <div class="bg-orange-500 text-white rounded-t-3xl p-4 flex flex-col items-center justify-end font-bold text-lg snap-start shadow-[0_-5px_15px_rgba(0,0,0,0.1)] relative z-10">
+                <img src="/images/prachachon-party-logo.png" alt="พรรคประชาชน" class="h-10 md:h-14 object-contain" onerror="this.style.display='none'" />
+            </div>
+            <div class="bg-yellow-400 text-gray-900 rounded-t-3xl p-4 flex flex-col items-center justify-end font-bold text-lg snap-start shadow-[0_-5px_15px_rgba(0,0,0,0.1)] relative z-10">
+                <img src="/images/senate-logo.png" alt="สมาชิกวุฒิสภา" class="h-10 md:h-16 object-contain" onerror="this.style.display='none'" />
+            </div>
+            <div class="bg-green-600 text-white rounded-t-3xl p-4 flex flex-col items-center justify-end font-bold text-lg snap-start shadow-[0_-5px_15px_rgba(0,0,0,0.1)] relative z-10 leading-tight text-center">
+                <img src="/images/fist.png" alt="เครือข่ายรัฐธรรมนูญประชาชน" class="h-10 md:h-16 object-contain" onerror="this.style.display='none'" />
+            </div>
+
+
+            <div class="sticky left-0 z-20 flex items-center justify-center">
+                <div class="bg-[#E9AF13] p-3 w-full h-full flex flex-col items-center justify-center text-center font-bold text-[#AF331F] text-xs md:text-sm">
+                    <img src="/images/ant_ant.png" class="w-10 md:w-20 mb-1" onerror="this.style.display='none'" />
+                    สมาชิกสภา<br/>ร่างรัฐธรรมนูญ
+                </div>
+            </div>
+            
+            <div class="bg-[#284D80]/90 p-5 flex flex-col items-center justify-center text-center text-white">
+                <div class="flex flex-row item-end gap-1 relative mb-2">
+                    <div class="text-4xl font-extrabold ">100+23</div><img src="/images/ant_small.png" class="w-6 h-auto absolute -top-4 -right-6" />
+                </div>
+                <span class="text-sm">รัฐสภาเลือกจากคนที่สมัครเข้ามา</span>
+            </div>
+            <div class="bg-[#0097B2]/80 text-white p-5 flex flex-col items-center justify-center text-center text-gray-700">
+                <div class="flex flex-row item-end gap-1 relative mb-2">
+                    <div class="text-3xl font-extrabold mb-1">80+20</div><img src="/images/ant_small.png" class="w-6 h-auto absolute -top-4 -right-6" />
+                </div>
+                
+                <span class="text-sm">รัฐสภาเลือกจากที่ปชช.หยั่งเสียงอิเล็กทรอนิกส์มา</span>
+            </div>
+            <div class="bg-[#fff0f0] border-x border-red-200 p-5 flex flex-col items-center justify-center text-center text-gray-700">
+                <span class="text-3xl font-extrabold text-red-600 mb-1">100+52</span>
+                <span class="text-sm">คน รัฐสภาเลือกจากที่ ปชช.เลือกมา</span>
+            </div>
+            <div class="bg-[#fff4ed] border-x border-orange-200 p-5 flex flex-col items-center justify-center text-center text-gray-700">
+                <span class="text-3xl font-extrabold text-orange-500 mb-1">150</span>
+                <span class="text-sm">คน รัฐสภารับรองหรือเลือกจากที่ ปชช.เลือกมา</span>
+            </div>
+            <div class="bg-[#fffbeb] border-x border-yellow-200 p-5 flex flex-col items-center justify-center text-center text-gray-700">
+                <span class="text-3xl font-extrabold text-yellow-500 mb-1">200</span>
+                <span class="text-sm">คน เลือกตั้งจากระบบแบ่งเขตและปาร์ตี้ลิสต์</span>
+            </div>
+            <div class="bg-[#f0fdf4] border-x border-green-200 p-5 flex flex-col items-center justify-center text-center text-gray-700">
+                <span class="text-3xl font-extrabold text-green-600 mb-1">300</span>
+                <span class="text-sm font-bold">คน เลือกตั้งจากระบบแบ่งเขตและปาร์ตี้ลิสต์</span>
+            </div>
+
+
+            <div class="sticky left-0 z-20 flex items-center justify-center">
+                <div class="bg-[#E9AF13] p-3 w-full h-full flex flex-col items-center justify-center text-center font-bold text-[#AF331F] text-xs md:text-sm">
+                    <img src="/images/ant_podium.png" class="w-10 md:w-16 mb-1" onerror="this.style.display='none'" />
+                    คณะกรรมาธิการฯ
+                </div>
+            </div>
+
+            <div class="bg-[#284D80]/90 p-2 flex flex-col justify-center text-sm text-white leading-relaxed">
+                <div class="bg-[#2F2480] p-4 z-12 rounded-2xl">
+                   <p><strong>กมธ.ยกร่าง 45 คน</strong><br/>(มีสสร. 2/3)</p>
+                    <div class="w-full h-px bg-blue-200 my-2"></div>
+                    <p><strong>กมธ.รับฟังฯ 45 คน</strong><br/>(มีสสร. 1/3)</p> 
+                </div>
+            </div>
+            <div class="bg-[#0097B2]/80 text-white p-2 flex flex-col justify-center text-sm text-gray-700 leading-relaxed text-left">
+                <div class="bg-[#067589]/80 p-4 z-12 min-h-[120px] font-bold rounded-2xl">
+                    ให้สิทธิยืดหยุ่นในการตั้ง กมธ.
+                </div>
+            </div>
+            <div class="bg-[#fff0f0] border-x border-t border-red-200 p-5 flex flex-col justify-center text-sm text-gray-700 leading-relaxed">
+                <p><strong>กมธ.ยกร่าง 35 คน</strong></p>
+                <div class="w-full h-px bg-red-200 my-2"></div>
+                <p><strong>กมธ.รับฟังฯ 35 คน</strong><br/>มาจาก สสร. 25 คน<br/>ผู้เชี่ยวชาญ 10 คน</p>
+            </div>
+            <div class="bg-[#fff4ed] border-x border-t border-orange-200 p-5 flex flex-col justify-center text-sm text-gray-700 leading-relaxed">
+                กมธ.ยกร่าง 45 คน โดยมี สสร. เกิน 50% และสามารถตั้ง กมธ.อื่นได้
+            </div>
+            <div class="bg-[#fffbeb] border-x border-t border-yellow-200 p-5 flex flex-col justify-center text-sm text-gray-700 leading-relaxed">
+                กมธ.ยกร่าง 35 คน มาจากการสรรหาของรัฐสภา
+            </div>
+            <div class="bg-[#f0fdf4] border-x border-t border-green-200 p-5 flex flex-col justify-center text-sm text-gray-800 font-medium leading-relaxed">
+                กมธ.ยกร่าง 35 คน ที่ไม่เคยเป็นสมาชิก คสช. และแขนขาของ คสช. ทั้งหมด
+            </div>
+
+
+            <div class="sticky left-0 z-20 flex items-center justify-center">
+                <div class="bg-[#E9AF13] p-3 w-full h-full flex flex-col items-center justify-center text-center font-bold text-[#AF331F] text-xs md:text-sm">
+                    <img src="/images/ant_read.png" class="w-14" />
+                    การให้ความเห็นชอบร่างรัฐธรรมนูญ
+                </div>
+            </div>
+
+            <div class="bg-[#284D80]/90 p-2 flex flex-col justify-center text-sm text-white leading-relaxed">
+                <ul class="list-disc pl-4 space-y-1">
+                    <li>ใช้เสียงกึ่งหนึ่งของรัฐสภา</li>
+                    <li>เสียง สว. 1 ใน 4</li>
+                    <li>ฝ่ายค้าน 20%</li>
+                </ul>
+            </div>
+            <div class="bg-[#0097B2]/80 text-white p-5 flex flex-col justify-center items-center text-center text-sm leading-relaxed">
+                ใช้เสียง <strong>3 ใน 5</strong> ของรัฐสภา
+            </div>
+            <div class="bg-[#fff0f0] border-x border-t border-red-200 p-5 flex flex-col justify-center items-center text-center text-sm text-gray-700 leading-relaxed">
+                ใช้เสียง <strong>2 ใน 3</strong> ของรัฐสภา
+            </div>
+            <div class="bg-[#fff4ed] border-x border-t border-orange-200 p-5 flex flex-col justify-center items-center text-center text-sm text-gray-700 leading-relaxed">
+                ใช้เสียง<strong>เกินกึ่งหนึ่ง</strong><br/>ของสมาชิกรัฐสภา
+            </div>
+            <div class="bg-[#fffbeb] border-x border-t border-yellow-200 p-5 flex flex-col justify-center items-center text-center text-3xl text-gray-300 font-light">
+                -
+            </div>
+            <div class="bg-[#f0fdf4] border-x border-t border-green-200 p-5 flex flex-col justify-center items-center text-center text-sm text-gray-800 font-bold leading-relaxed">
+                ใช้เสียง สสร.<br/>ไม่น้อยกว่า 3 ใน 5
+            </div>
+
+
+            <div class="sticky left-0 z-20 flex items-center justify-center mb-4">
+                <div class="bg-[#E9AF13] p-3 w-full h-full flex flex-col items-center justify-center text-center font-bold text-[#AF331F] text-xs md:text-sm">
+                    <img src="/images/write.svg" class="w-12 mb-2" />
+                    กรอบเนื้อหา
+                </div>
+            </div>
+
+            <div class="bg-[#284D80]/90 p-4 mb-4 rounded-b-3xl flex flex-col justify-center text-sm text-white shadow-sm leading-relaxed">
+                <p class="text-white text-center leading-relaxed text-sm md:text-base">
+                    ห้ามแก้ไขหมวด 1-2 และห้ามเปลี่ยนระบอบปกครองและรูปแบบรัฐ
+                </p>
+            </div>
+            <div class="flex flex-col w-full drop-shadow-md mb-6">
     
-    <div class="overflow-x-auto">
-        <table class="table w-full border-separate border-spacing-1">
-            <thead>
-                <tr class="text-black text-center text-base ">
-                    <th class="sticky left-0 bg-white z-10 p-4 font-bold border-r shadow-[5px_0_5px_-5px_rgba(0,0,0,0.2)] font-bold whitespace-nowrap align-top"> </th>
-                    <th class="p-4 bg-[#4d95ff] min-w-[200px] border border-white">พรรคภูมิใจไทย</th>
-                    <th class="p-4 bg-[#8ccfff] min-w-[200px] border border-white">พรรคประชาธิปัตย์</th>
-                    <th class="p-4 bg-[#ff6766] min-w-[200px] border border-white">พรรคเพื่อไทย</th>
-                    <th class="p-4 bg-[#ffaa66] min-w-[200px] border border-white">พรรคประชาชน</th>
-                    <th class="p-4 bg-[#ffe992] min-w-[200px] border border-white">สมาชิกวุฒิสภา</th>
-                    <th class="p-4 bg-[#5cca65] min-w-[200px] border border-white">เครือข่ายรัฐธรรมนูญ<br />ประชาชน</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="sticky left-0 bg-white z-10 p-4 border-r shadow-[5px_0_5px_-5px_rgba(0,0,0,0.2)] font-bold whitespace-nowrap align-top">สมาชิกสภา<br />ร่างรัฐธรรมนูญ</td>
-                    <td class="align-top bg-[#4d95ff]">100 + 23 คน รัฐสภาเลือกจากคนที่สมัครเข้ามา</td>
-                    <td class="align-top bg-[#8ccfff]">80 +20 รัฐสภาเลือกจากที่ปชช.หยั่งเสียงอิเล็กทรอนิกส์มา</td>
-                    <td class="align-top bg-[#ff6766]">100+52 คน รัฐสภาเลือกจากที่ ปชช.เลือกมา</td>
-                    <td class="align-top bg-[#ffaa66]">150 คน รัฐสภารับรองหรือเลือกจากที่ ปชช.เลือกมา</td>
-                    <td class="align-top bg-[#ffe992]">200 คน เลือกตั้งจากระบบแบ่งเขตและปาร์ตี้ลิสต์</td>
-                    <td class="align-top bg-[#5cca65]">300 คน เลือกตั้งจากระบบแบ่งเขตและปาร์ตี้ลิสต์</td>
-                </tr>
-                <tr>
-                    <td class="sticky left-0 bg-white z-10 p-4 border-r shadow-[5px_0_5px_-5px_rgba(0,0,0,0.2)] font-bold whitespace-nowrap align-top">คณะกรรมาธิการฯ</td>
-                    <td class="align-top bg-[#4d95ff]">กมธ.ยกร่าง 45 คน (มีสสร. 2/3) กมธ.รับฟังฯ 45 คน (มีสสร. 1/3)</td>
-                    <td class="align-top bg-[#8ccfff]">ให้สิทธิยืดหยุ่นในการตั้ง กมธ.</td>
-                    <td class="align-top bg-[#ff6766]">กมธ.ยกร่าง 35 คน กมธ.รับฟังฯ 35 คน มาจาก สสร.25 คน ผู้เชี่ยวชาญ 10 คน</td>
-                    <td class="align-top bg-[#ffaa66]">กมธ.ยกร่าง 45 คน โดยมี สสร.เกิน 50% และสามารถตั้ง กมธ.อื่นได้</td>
-                    <td class="align-top bg-[#ffe992]">กมธ.ยกร่าง 35 คน มาจากการสรรหาของรัฐสภา</td>
-                    <td class="align-top bg-[#5cca65]">กมธ.ยกร่าง 35 คน ที่ไม่เคยเป็นสมาชิก คสช.และแขนขาของ คสช.ทั้งหมด</td>
-                </tr>
-                <tr>
-                    <td class="sticky left-0 bg-white z-10 p-4 border-r shadow-[5px_0_5px_-5px_rgba(0,0,0,0.2)] font-bold whitespace-nowrap align-top">การให้ความเห็นชอบ<br />ร่างรัฐธรรมนูญ</td>
-                    <td class="align-top bg-[#4d95ff]"><ul class="list-disc pl-5"><li>ห้ามแก้ไขหมวด 1-2</li><li>เสียง สว.1 ใน 4</li><li>ฝ่ายค้าน 20%</li></ul></td>
-                    <td class="align-top bg-[#8ccfff]">ใช้เสียง 3 ใน 5 ของรัฐสภา</td>
-                    <td class="align-top bg-[#ff6766]">ใช้เสียง 2 ใน 3 ของรัฐสภา</td>
-                    <td class="align-top bg-[#ffaa66]">เกินกึ่งหนึ่งของสมาชิกรัฐสภา</td>
-                    <td class="align-top bg-[#ffe992]">สสร.เป็นผู้พิจารณาลงความเห็น</td>
-                    <td class="align-top bg-[#5cca65]">ใช้เสียง สสร. ไม่น้อยกว่า 3 ใน 5</td>
-                </tr>
-                <tr>
-                    <td class="sticky left-0 bg-white z-10 p-4 border-r shadow-[5px_0_5px_-5px_rgba(0,0,0,0.2)] font-bold whitespace-nowrap align-top">กรอบเนื้อหา</td>
-                    <td class="align-top bg-[#4d95ff]">ห้ามแก้ไขหมวด 1-2 และห้ามเปลี่ยนระบอบปกครองและรูปแบบรัฐ</td>
-                    <td class="align-top bg-[#8ccfff]">คงหมวด 1-2 ถ้าจะแก้ให้เสนอรายประเด็น ไม่เหมารวมในทั้งฉบับ</td>
-                    <td class="align-top bg-[#ff6766]">คงระบอบและรูปแบบของรัฐ ยึดหลักนิติรัฐ นิติธรรม ความเสมอภาค การตรวจสอบถ่วนดุล และกระจายอำนาจ</td>
-                    <td class="align-top bg-[#ffaa66]">ไม่เปลี่ยนแปลงรูปแบบของรัฐและระบอบปกครอง</td>
-                    <td class="align-top bg-[#ffe992]"> </td>
-                    <td class="align-top bg-[#5cca65]">ให้ สสร. จัดทำกรอบการยกร่าง</td>
-                </tr>
-            </tbody>
-        </table>
+            <div class="bg-[#0B1536] border-x-[10px] border-t-[10px] border-[#0097B2] p-5 pb-3">
+                    <p class="text-white text-center leading-relaxed text-sm md:text-base">
+                        คงหมวด 1-2 ถ้าจะแก้ให้เสนอรายประเด็น ไม่เหมารวมในทั้งฉบับ
+                    </p>
+                </div>
+
+                <div class="relative w-full h-[60px]">
+                    <div class="absolute inset-0 bg-cyan-500 [clip-path:polygon(0_0,100%_0,50%_100%)]"></div>
+                    
+                    <div class="absolute inset-x-[4px] top-0 h-[20px] bg-[#0B1536] [clip-path:polygon(0_0,100%_0,50%_100%)]"></div>
+                </div>
+                
+            </div>
+            <div class="bg-[#fff0f0] border-x border-t border-b border-red-200 p-5 mb-4 rounded-b-3xl flex flex-col justify-center text-sm text-gray-700 shadow-sm leading-relaxed">
+                คงระบอบและรูปแบบของรัฐ ยึดหลักนิติรัฐ นิติธรรม ความเสมอภาค การตรวจสอบถ่วงดุล และกระจายอำนาจ
+            </div>
+            <div class="bg-[#fff4ed] border-x border-t border-b border-orange-200 p-5 mb-4 rounded-b-3xl flex flex-col justify-center text-sm text-gray-700 shadow-sm leading-relaxed">
+                ไม่เปลี่ยนแปลงรูปแบบของรัฐและระบอบปกครอง
+            </div>
+            <div class="bg-[#fffbeb] border-x border-t border-b border-yellow-200 p-5 mb-4 rounded-b-3xl flex flex-col justify-center items-center text-3xl text-gray-300 font-light shadow-sm">
+                -
+            </div>
+            <div class="bg-[#f0fdf4] border-x border-t border-b border-green-200 p-5 mb-4 rounded-b-3xl flex flex-col justify-center text-sm text-gray-800 shadow-sm font-bold leading-relaxed text-center">
+                ให้ สสร. จัดทำกรอบการยกร่าง
+            </div>
+
+        </div>
     </div>
 </div>
+
+<style>
+    /* CSS สำหรับซ่อน Scrollbar แต่ยังเลื่อนได้ */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+</style>

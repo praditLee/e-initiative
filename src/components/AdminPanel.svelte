@@ -134,6 +134,9 @@
                             <th>ชื่อ</th>
                             <th>นามสกุล</th>
                             <th>จังหวัด</th>
+                            <th>อีเมล</th>
+                            <th>เบอร์โทรศัพท์</th>
+                            <th>ความคิดเห็น</th>
                             <th>วันที่ (Timestamp)</th>
                         </tr>
                     </thead>
@@ -145,6 +148,9 @@
                                 <td>{doc.firstname}</td>
                                 <td>{doc.lastname}</td>
                                 <td>{doc.location}</td>
+                                <td>{doc.email || '-'}</td>
+                                <td>{doc.phone || '-'}</td>
+                                <td>{doc.comment || '-'}</td>
                                 <td>{doc.timestamp ? new Date(doc.timestamp._seconds * 1000).toLocaleString('th-TH') : '-'}</td>
                             </tr>
                         {/each}
