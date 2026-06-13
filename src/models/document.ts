@@ -17,9 +17,9 @@ export const documentsTable = Object({
 	prefix: Column('prefix', asOneOf(['นาย', 'นาง', 'นางสาว'])),
 	firstname: Column('firstname', asString({ minLength: 1 })),
 	lastname: Column('lastname', asString({ minLength: 1 })),
-	email: Column('email', asString()),
-	phone: Column('phone', asString()),
-	comment: Column('comment', asString()),
+	email: Column('email', asString({ minLength: 0 })),
+	phone: Column('phone', asString({ minLength: 0 })),
+	comment: Column('comment', asString({ minLength: 0 })),
 });
 
 export type FormDocument = StaticDecode<typeof documentsTable>;

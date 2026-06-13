@@ -38,8 +38,17 @@
 
 	const { form, setTouched, setData, data, reset } = createForm({
 		validate: (values) => {
+            // 1. จำลองข้อมูลโดยเติม "-" ให้กับช่องที่ว่าง เพื่อหลอกให้ Validation ผ่าน
+            const checkValues = {
+                ...values,
+                comment: values.comment ? values.comment : "-",
+                email: values.email ? values.email : "-",
+                phone: values.phone ? values.phone : "-",
+                lineId: values.lineId ? values.lineId : "-"
+            };
+
 			const errors = Object.fromEntries(
-				[...Value.Errors(documentsTable, values)].map((e) => [
+				[...Value.Errors(documentsTable, checkValues)].map((e) => [
 					e.path.replace('/', ''),
 					e.message,
 				]),
@@ -50,13 +59,23 @@
 		async onSubmit(values) {
 			isLoading = true;
 			try {
-				if (!Value.Check(documentsTable, values)) {
-					throw [...Value.Errors(documentsTable, values)];
+                // 2. เติม "-" ให้ข้อมูลจริงก่อนส่งเข้า Database / Google Sheets
+                const finalValues = {
+                    ...values,
+                    comment: values.comment ? values.comment : "-",
+                    email: values.email ? values.email : "-",
+                    phone: values.phone ? values.phone : "-",
+                    lineId: values.lineId ? values.lineId : "-"
+                };
+
+				if (!Value.Check(documentsTable, finalValues)) {
+					throw [...Value.Errors(documentsTable, finalValues)];
 				}
 
-				await submitDocument(values, turnstileToken!);
-				successDialog.showModal();
-				// clearPad();
+                // สังเกตตรงนี้: เราเปลี่ยนมาส่ง finalValues แทน values เดิม
+				await submitDocument(finalValues, turnstileToken!);
+				
+                successDialog.showModal();
 				reset();
 				turnstileToken = null;
 				turnstileRef?.reset();
@@ -161,8 +180,8 @@
         <span class="label-text font-bold">ต้องการรับข้อมูลข่าวสารกิจกรรม</span>
     </label>
 
-    {#if isSubscribe}
-        <div class="flex flex-col md:flex-row md:space-x-[10px] mt-4 pt-2 border-t border-base-200 animate-fade-in-down">
+    
+        <div class="flex-col md:flex-row md:space-x-[10px] mt-4 pt-2 border-t border-base-200 animate-fade-in-down {isSubscribe ? 'flex' : 'hidden'}">
             <div class="form-control flex-1">
                 <ValidationMessage for="email" let:messages>
                     <label class="label" for="email">
@@ -182,7 +201,7 @@
             </div>
 
         </div>
-    {/if}
+   
 </div>
 	<!-- กล่องคอมเมนต์แสดงความคิดเห็น -->
 <div class="form-control mt-2">
