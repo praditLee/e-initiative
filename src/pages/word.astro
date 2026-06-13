@@ -5,105 +5,118 @@ import SectionContainer from '../components/SectionContainer.astro';
 import DocumentIcon from '../components/icons/DocumentIcon.svelte';
 ---
 <Layout title="คำประกาศเจตนารมย์" description="กองทัพมดเดินหน้าร่างรัฐธรรมนูญประชาชน" image="/images/where-people.png">
+  
+  <div class="fixed inset-0 w-full h-full -z-10 bg-[#e8e0cc]">
+    <img 
+      src="/images/paper-bg.jpg" 
+      alt="texture" 
+      class="w-full h-full object-cover opacity-60 mix-blend-multiply pointer-events-none" 
+      onerror="this.style.display='none'"
+    />
+  </div>
+
   <SectionContainer
-		outerClass="relative"
+		outerClass="relative z-10 py-12 md:py-20"
 		innerClass="flex w-full max-w-screen-md flex-col gap-8"
 	>
-  <BackHomeLink class="absolute left-1 top-3" />
-<article class="max-w-5xl mx-auto bg-white  rounded-3xl shadow-md border border-slate-100 overflow-hidden">
     
-    <div class="h-2 bg-red-600 w-full"></div>
 
-    <div class="p-8 sm:p-12 md:p-16">
-      <header class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-semibold tracking-widest text-red-500 uppercase bg-red-50 px-3 py-1 rounded-full">คำประกาศ</span>
-        <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-4 mb-2 tracking-tight">
-          กองทัพมดเดินหน้าร่างรัฐธรรมนูญประชาชน
-        </h1>
-        <div class="w-12 h-1 bg-slate-200 mx-auto my-6 rounded-full"></div>
-      </header>
+    <article class="max-w-4xl mx-auto  overflow-hidden relative">
+      
+      <div class="absolute inset-0 shadow-[inset_0_0_60px_rgba(139,69,19,0.1)] pointer-events-none"></div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start text-slate-600 leading-relaxed text-base sm:text-md font-light">
+      <!-- <div class="h-2 bg-red-800 w-full relative z-10"></div> -->
+
+      <div class="p-8 sm:p-12 md:p-16 relative z-10">
         
-        <div class="space-y-6">
-          <p>
-            นานมากแล้ว... ที่เราถูกทำให้เชื่อว่า <span class="font-medium text-slate-900">รัฐธรรมนูญเป็นเรื่องของผู้ทรงอำนาจ เป็นเรื่องของรัฐบาล และเป็นเรื่องของผู้ปกครอง</span>
-          </p>
-          
-          <p>
-            เรามีรัฐธรรมนูญมาแล้วถึง 20 ฉบับ มากติดอันดับต้นๆ ของโลก
-          </p>
-          
-          <p>
-            แต่ในบรรดารัฐธรรมนูญทั้งหมดนั้น มีเพียงฉบับเดียวที่ประชาชนเป็นผู้สถาปนา เป็นผู้ทรงสิทธิให้ความชอบธรรมแก่ผู้ร่างรัฐธรรมนูญที่มาจากการเลือกตั้ง และสุดท้าย รัฐธรรมนูญฉบับนั้นก็ถูกฉีกทึ้งทำลายโดยคณะรัฐประหาร
-          </p>
+        <header class="text-center max-w-2xl mx-auto mb-16 border-b border-stone-300 pb-8">
+          <img src="/images/ant_ant.png" class="mx-auto w-16 mb-4 opacity-80 mix-blend-multiply" alt="กองทัพมด" onerror="this.style.display='none'" />
+          <span class="text-sm font-bold tracking-widest text-red-800 uppercase">คำประกาศ</span>
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2a2626] mt-4 mb-2 leading-tight drop-shadow-sm">
+            กองทัพมดเดินหน้าร่าง<br class="hidden sm:block"/>รัฐธรรมนูญประชาชน
+          </h1>
+          <p class="text-stone-500 font-serif italic mt-4 text-sm">ณ ย่ำรุ่งของวันที่ 8 มิถุนายน 2569</p>
+        </header>
 
-          <div class="bg-slate-50 border-l-4 border-slate-900 p-4 rounded-r-xl my-6">
-            <p class="font-normal text-slate-900 italic">
-              “รัฐธรรมนูญคือกฎหมายสูงสุดของประเทศ เป็นสัญญาประชาคม เป็นข้อตกลงร่วมกันของทุกคนในสังคม ที่ยินยอมสละบางสิ่ง เพื่อสร้างกติกาและมอบอำนาจให้ “รัฐ” ทำหน้าที่ดูแลความสงบสุขและรักษาความปลอดภัยร่วมกัน”
+        <div class="text-[#3c3633] leading-relaxed text-base sm:text-lg font-medium">
+          
+          <div class="space-y-6">
+            <p>
+              นานมากแล้ว... ที่เราถูกทำให้เชื่อว่า <span class="font-bold text-black">รัฐธรรมนูญเป็นเรื่องของผู้ทรงอำนาจ เป็นเรื่องของรัฐบาล และเป็นเรื่องของผู้ปกครอง</span>
+            </p>
+            
+            <p>
+              เรามีรัฐธรรมนูญมาแล้วถึง 20 ฉบับ มากติดอันดับต้นๆ ของโลก
+            </p>
+            
+            <p>
+              แต่ในบรรดารัฐธรรมนูญทั้งหมดนั้น มีเพียงฉบับเดียวที่ประชาชนเป็นผู้สถาปนา เป็นผู้ทรงสิทธิให้ความชอบธรรมแก่ผู้ร่างรัฐธรรมนูญที่มาจากการเลือกตั้ง และสุดท้าย รัฐธรรมนูญฉบับนั้นก็ถูกฉีกทึ้งทำลายโดยคณะรัฐประหาร
+            </p>
+
+            <div class="bg-[#f0ece1]/80 border-l-4 border-stone-800 p-5 rounded-r-lg my-6 shadow-sm">
+              <p class="font-bold text-stone-800 italic">
+                “รัฐธรรมนูญคือกฎหมายสูงสุดของประเทศ เป็นสัญญาประชาคม เป็นข้อตกลงร่วมกันของทุกคนในสังคม ที่ยินยอมสละบางสิ่ง เพื่อสร้างกติกาและมอบอำนาจให้ “รัฐ” ทำหน้าที่ดูแลความสงบสุขและรักษาความปลอดภัยร่วมกัน”
+              </p>
+            </div>
+
+            <p>
+              ทว่าในห้วงเวลานี้... เหล่าผู้มีอำนาจกำลังผลักดันกติกาที่มีเงื่อนไขจำกัดสิทธิประชาชนในการเลือก “ผู้ร่าง” ด้วยตัวเองอีกครั้ง
+            </p>
+            
+            <p>
+              พวกเขาสร้างข้ออ้าง “ศักดิ์และสิทธิ์ของกฎหมายสูงสุด” มาบิดพลิ้วเจตจำนงของประชาชน 21 ล้านเสียงที่โหวตเห็นชอบให้จัดทำรัฐธรรมนูญใหม่ เพียงเพื่อเอื้อประโยชน์ให้กับคนหยิบมือเดียว
             </p>
           </div>
+  
+          <div class="space-y-6">
+            <p>
+              พวกเขาเห็นประชาชนเป็นแค่มดงานมดปลวก จะบีบก็ตายจะคลายก็รอด แต่หารู้ไม่ว่า ฝูงมดงานเหล่านี้เองที่ทุ่มพลังชีวิตทำงานหามรุ่งหามค่ำ เกิดและตายไปรุ่นแล้วรุ่นเล่าเพื่อพัฒนาผืนดินถิ่นเกิดนี้ขึ้นมา
+            </p>
+            
+            <p class="font-bold text-stone-900 bg-[#e8dbce]/60 p-5 rounded-lg border border-[#d4c3b3]">
+              เพราะอาณาจักรมดไม่อาจสร้างได้ด้วยนางพญาเพียงลำพัง! แท้จริงแล้วมันก่อร่างสร้างขึ้นอย่างแข็งแกร่งจากเหล่ามดงานมหาศาล ที่ขับเคลื่อนอาณาจักร ทั้งหาอาหาร ปกป้องรัง และซ่อมแซมรากฐาน
+            </p>
+            
+            <p>
+              เราขอยืนยันว่า ประชาชนคือเจ้าของอำนาจอธิปไตย อำนาจสถาปนารัฐธรรมนูญเป็นของประชาชน เรามีสิทธิโดยชอบธรรมในการกำหนดกติกา แก้ไข หรือจัดทำรัฐธรรมนูญฉบับใหม่ โดยมิต้องอ้อนวอนร้องขอหรือรอส่วนบุญจากใคร
+            </p>
 
-          <p>
-            ทว่าในห้วงเวลานี้... เหล่าผู้มีอำนาจกำลังผลักดันกติกาที่มีเงื่อนไขจำกัดสิทธิประชาชนในการเลือก “ผู้ร่าง” ด้วยตัวเองอีกครั้ง
-          </p>
-          
-          <p>
-            พวกเขาสร้างข้ออ้าง “ศักดิ์และสิทธิ์ของกฎหมายสูงสุด” มาบิดพลิ้วเจตจำนงของประชาชน 21 ล้านเสียงที่โหวตเห็นชอบให้จัดทำรัฐธรรมนูญใหม่ เพียงเพื่อเอื้อประโยชน์ให้กับคนหยิบมือเดียว
-          </p>
-          <img
-          class="w-full object-cover"
-          src="/medias/paan_blank.png"
-          alt="ภาพประกอบ: ประชาชนอยู่ตรงไหนในกระบวนการนี้"
-        />
-        </div>
-        
-
-        <div class="space-y-6 md:border-l md:border-slate-100 md:pl-12">
-          <p>
-            พวกเขาเห็นประชาชนเป็นแค่มดงานมดปลวก จะบีบก็ตายจะคลายก็รอด แต่หารู้ไม่ว่า ฝูงมดงานเหล่านี้เองที่ทุ่มพลังชีวิตทำงานหามรุ่งหามค่ำ เกิดและตายไปรุ่นแล้วรุ่นเล่าเพื่อพัฒนาผืนดินถิ่นเกิดนี้ขึ้นมา
-          </p>
-          
-          <p class="font-medium text-slate-900 bg-red-50/50 p-4 rounded-xl border border-red-100/50">
-            เพราะอาณาจักรมดไม่อาจสร้างได้ด้วยนางพญาเพียงลำพัง! แท้จริงแล้วมันก่อร่างสร้างขึ้นอย่างแข็งแกร่งจากเหล่ามดงานมหาศาล ที่ขับเคลื่อนอาณาจักร ทั้งหาอาหาร ปกป้องรัง และซ่อมแซมรากฐาน
-          </p>
-          
-          <p>
-            เราขอยืนยันว่า ประชาชนคือเจ้าของอำนาจอธิปไตย อำนาจสถาปนารัฐธรรมนูญเป็นของประชาชน เรามีสิทธิโดยชอบธรรมในการกำหนดกติกา แก้ไข หรือจัดทำรัฐธรรมนูญฉบับใหม่ โดยมิต้องอ้อนวอนร้องขอหรือรอส่วนบุญจากใคร
-          </p>
-
-          <div class="text-center py-4 my-2">
-            <p class="text-xl font-bold text-red-600 block mb-1">“ประชาชนอยู่ตรงไหนในรัฐธรรมนูญ?”</p>
-            <p class="text-sm font-medium text-slate-500">เราจะถามประโยคนี้ซ้ำๆ จนกว่าอำนาจสูงสุดจะเป็นของประชาชนอย่างแท้จริง</p>
-          </div>
-
-          <div class="space-y-2 bg-slate-900 text-white p-6 rounded-2xl shadow-inner">
-            <div class="flex items-center gap-3">
-              <span class="w-2 h-2 rounded-full bg-red-500"></span>
-              <p class="font-medium">รัฐธรรมนูญต้องยึดโยงกับประชาชน สสร. ต้องมาจากการเลือกตั้ง 100%</p>
+            <div class="text-center py-6 my-4 border-y border-stone-300 border-dashed">
+              <p class="text-2xl font-extrabold text-red-800 block mb-2">“ประชาชนอยู่ตรงไหนในรัฐธรรมนูญ?”</p>
+              <p class="text-sm font-bold text-stone-600">เราจะถามประโยคนี้ซ้ำๆ จนกว่าอำนาจสูงสุดจะเป็นของประชาชนอย่างแท้จริง</p>
             </div>
-            <div class="flex items-center gap-3">
-              <span class="w-2 h-2 rounded-full bg-red-500"></span>
-              <p class="font-medium">รัฐธรรมนูญไม่ได้มาด้วยการร้องขอ อยากได้ต้องร่วมกันลุกขึ้นสร้าง!</p>
+
+            <div class="space-y-3 bg-[#2a2626] text-[#f4eee0] p-6 rounded-xl shadow-lg border border-stone-900">
+              <div class="flex items-start gap-3">
+                <span class="text-red-500 font-bold mt-1">✓</span>
+                <p class="font-medium">รัฐธรรมนูญต้องยึดโยงกับประชาชน สสร. ต้องมาจากการเลือกตั้ง 100%</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-red-500 font-bold mt-1">✓</span>
+                <p class="font-medium">รัฐธรรมนูญไม่ได้มาด้วยการร้องขอ อยากได้ต้องร่วมกันลุกขึ้นสร้าง!</p>
+              </div>
             </div>
           </div>
+
         </div>
+
+        <footer class="mt-16 pt-12 border-t-2 border-stone-300 text-center max-w-2xl mx-auto">
+          <p class="text-lg font-bold text-stone-800 mb-8">
+            มาร่วมเป็นกองทัพมด ก่อร่างสร้าง “ร่างรัฐธรรมนูญฉบับประชาชน” ไปด้วยกัน เราจะลุกขึ้นมากำหนดอนาคตตัวเอง และป่าวร้องกึกก้องทั่วทุกสารทิศว่า:
+          </p>
+          <div class="bg-[#8b0000] text-[#fdfbf5] p-8 rounded-xl shadow-xl transform rotate-[-1deg]">
+            <p class="text-xl sm:text-2xl font-black leading-relaxed font-serif">
+              “ประชาชนไทยพร้อมนานแล้ว สำหรับการปกครองในระบอบประชาธิปไตยที่อำนาจสูงสุดเป็นของประชาชน”
+            </p>
+          </div>
+        </footer>
 
       </div>
+    </article>
 
-      <footer class="mt-16 pt-12 border-t border-slate-100 text-center max-w-2xl mx-auto">
-        <p class="text-lg font-medium text-slate-900 mb-6">
-          มาร่วมเป็นกองทัพมด ก่อร่างสร้าง “ร่างรัฐธรรมนูญฉบับประชาชน” ไปด้วยกัน เราจะลุกขึ้นมากำหนดอนาคตตัวเอง และป่าวร้องกึกก้องทั่วทุกสารทิศว่า:
-        </p>
-        <div class="bg-gradient-to-r from-red-500 to-red-600 text-white p-8 rounded-2xl shadow-md transform hover:scale-[1.01] transition-transform duration-300">
-          <p class="text-xl sm:text-2xl font-bold leading-relaxed">
-            “ประชาชนไทยพร้อมนานแล้ว สำหรับการปกครองในระบอบประชาธิปไตยที่อำนาจสูงสุดเป็นของประชาชน”
-          </p>
-        </div>
-      </footer>
-
-    </div>
-  </article>
-  <a href="https://drive.google.com/file/d/1E054rCU47C6PsYL39lt6DYlvz6qIP89e/view?usp=sharing" class="btn btn-primary btn-block mt-8">ดาวน์โหลดคำประกาศ <DocumentIcon /></a>
+    <a href="/declaration.pdf" target="_blank" class="btn btn-neutral btn-block mt-4 shadow-lg text-lg font-bold">
+      ดาวน์โหลดคำประกาศ (PDF) <DocumentIcon />
+    </a>
+    <img src="/images/ant_pann.png" class="w-30 h-auto mx-auto" />
   </SectionContainer>
-  </Layout>
+</Layout>
