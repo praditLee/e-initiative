@@ -7,6 +7,7 @@ import HeadquarterMap from './HeadquarterMap.svelte';
 import PostAddress from './PostAddress.svelte';
 import GalleryGrid from '../GalleryGrid.svelte';
 import SocialFeedList from '../SocialFeedList.svelte';
+import Intro from './Intro.astro'
 
 // สแกนหารูปและ PDF ในโฟลเดอร์เหมือนเดิม
 const files = import.meta.glob('/public/medias/*.{png,jpg,jpeg,webp,pdf}', { eager: true });
@@ -17,9 +18,7 @@ const fileUrls = Object.keys(files).map(path => path.replace('/public', ''));
 	id="volunteer"
 	innerClass="flex w-full max-w-screen-md flex-col items-center gap-8"
 >
-	<h2 class="heading-responsive-01 text-center">ร่วมทำให้รัฐธรรมนูญอยู่ในชีวิตประจำวัน</h2>
-	<h2 class="heading-responsive-02 text-center">กองทัพมดร่วมปฏิบัติการ</h2>
-
+<Intro />
 	<div class="flex w-full flex-col divide-y">
 		<StepBlock>
 			{
