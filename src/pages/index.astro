@@ -13,6 +13,7 @@ import ProposalOverview from '../components/present/ProposalOverview.astro';
 import ProposalTable from '../components/present/ProposalTable.astro';
 import ConstTimeline from '../components/present/ConstTimeline.astro';
 import VolunteerSection from '../components/index/VolunteerSection.astro';
+import Timeline from '../components/Timeline.svelte';
 ---
 
 <Body>
@@ -49,7 +50,9 @@ import VolunteerSection from '../components/index/VolunteerSection.astro';
 			</div>
 		</section>
 		
-	
+
+    		<Timeline client:visible />
+
 		<AboutSection />
 	</div>
 	<Navbar slot="after-footer" client:idle />
