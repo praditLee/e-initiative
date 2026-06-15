@@ -1,7 +1,7 @@
 /** @type {import('./src/models/config').EInitiativeConfig} */
 export default {
 	metadata: {
-		title: 'ANTS - ร่างรัฐธรรมนูญประชาชน',
+		title: 'ประชาชนร่างรัฐธรรมนูญ',
 		description: 'กองทัพมดเดินหน้าร่างรัฐธรรมนูญประชาชน',
 		siteUrl: 'https://action.actlabthailand.org',
 		previewImageUrl: 'https://action.actlabthailand.org/og.png',
