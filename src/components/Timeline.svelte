@@ -42,11 +42,18 @@
 
 <div class="w-full bg-white shadow-md border border-gray-100 flex flex-col font-sans">
     
-    <div class="bg-[#e9af13] p-5 md:p-6">
-        <h2 class="text-2xl text-center md:text-3xl font-extrabold text-[#2a2626]">ไทม์ไลน์สู่รัฐธรรมนูญใหม่</h2>
-    </div>
+    <section
+			class="relative w-full h-[200px] bg-scroll md:bg-fixed bg-center bg-cover flex items-center justify-center"
+			style="background-image: url('/images/democracy_monument_inv.webp');"
+			>
+			<div class="absolute inset-0 bg-yellow-500/90"></div>
 
-    <div class="w-full max-w-6xl mx-auto overflow-x-auto snap-x snap-mandatory hide-scrollbar">
+			<div class="relative z-10 text-center px-6">
+				<img src="/images/timeline_dm_h.svg" class="max-w-[250px] md:max-w-[850px]" />
+			</div>
+	</section>
+
+    <div class="w-full max-w-6xl mx-auto py-12 overflow-x-auto snap-x snap-mandatory hide-scrollbar">
         <div class="flex flex-row md:flex-nowrap min-w-max md:min-w-0 md:w-full">
             
             {#each timelineData as item, index}

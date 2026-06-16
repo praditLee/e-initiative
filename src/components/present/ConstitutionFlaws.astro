@@ -1,0 +1,95 @@
+---
+// 1. สร้าง Array เก็บข้อมูล (ง่ายต่อการแก้ไขในอนาคต)
+const flawsData = [
+    {
+        icon: "/images/icon-group.png", // เปลี่ยนเป็นพาธรูปไอคอนของคุณ
+        title: "ขาดการมีส่วนร่วมในการร่าง<br/>และปิดกั้นความเห็นต่าง",
+        bullets: [
+            "ร่างขึ้นในยุค คสช. มีการปิดกั้นและดำเนินคดีกับผู้เห็นต่างกว่า 200 คน และมีคำถามพ่วงที่เปิดทางให้ สว. 250 คน ร่วมโหวตเลือกนายกรัฐมนตรีได้"
+        ]
+    },
+    {
+        icon: "/images/icon-structure.png",
+        title: "มีโครงสร้างสืบทอดอำนาจ สว.<br/>และองค์กรอิสระมาจากการแต่งตั้ง",
+        bullets: [
+            "สถาบันหลักที่มีอำนาจทางการเมือง เช่น สว. หรือองค์กรอิสระ มีที่มาจากการแต่งตั้งทั้งหมดและไม่ยึดโยงกับประชาชน"
+        ]
+    },
+    {
+        icon: "/images/icon-vote.png",
+        title: "พรรคการเมืองเคยแก้ไขได้เพียง<br/>กติกาการเลือกตั้ง",
+        bullets: [
+            "เปลี่ยนจากบัตรใบเดียว (ปี 62) เป็นบัตรสองใบ (ปี 66) ส่งผลให้พรรคขนาดกลางและเล็กเสียเปรียบ จนนำไปสู่การควบรวมพรรค"
+        ]
+    },
+     {
+        icon: "/images/icon-lock.png",
+        title: "เต็มไปด้วยช่องโหว่สิทธิเสรีภาพ<br/>เปิดทางให้ลิดรอนสิทธิการแสดงออก",
+        bullets: [
+            "มีการใช้ถ้อยคำกฎหมายที่กว้างและคลุมเครือ เปิดช่องให้เกิดการตีความเพื่อลิดรอนสิทธิต่างๆ มีการยกเลิกสิทธิหลายอย่าง และทำให้สิทธิบางอย่าง กลายเป็นเพียงหน้าที่ของรัฐ"
+        ]
+    },
+    
+    {
+        icon: "/images/icon-blackbox.png",
+        title: "สำนักพระราชวังเคยแก้ไขส่วนพระราชอำนาจ<br/>ก่อนประกาศใช้",
+        bullets: [
+            "10 ม.ค. 2560: มีการแก้ไขส่วนพระราชอำนาจในหมวด 1 และหมวด 2",
+            "เกิดขึ้น หลัง ผ่านประชามติปี 2559 แต่ ก่อน วันประกาศใช้รัฐธรรมนูญจริง"
+        ]
+    }
+   
+];
+---
+
+<div class="w-full flex flex-col font-sans">
+
+    <div
+		class="relative w-full h-full bg-scroll md:bg-fixed bg-center bg-cover flex items-center justify-center"
+		style="background-image: url('/images/democracy_monument_inv.webp');"
+		>
+			<div class="absolute inset-0 bg-yellow-500/90"></div>
+
+                <div class="relative z-10 text-left px-6 py-12">
+                    <img src="/images/problem_dm60_h.svg" class="max-w-[250px] md:max-w-[650px] mx-auto" />
+                    <div class="py-12 px-4 md:px-8">
+                        <div class="max-w-6xl mx-auto">
+                            
+                            <div class="columns-1 md:columns-2 gap-6 space-y-6">
+                                
+                                {flawsData.map((item) => (
+                                    <div class="break-inside-avoid bg-white rounded-[32px] p-6 md:p-8 shadow-sm border border-white/50">
+                                        
+                                        <div class="flex items-start gap-4 mb-4">
+                                            <div class="w-16 h-16 flex items-center justify-center overflow-hidden">
+                                                <img src={item.icon} alt="icon" class="w-12 h-12 object-contain" onerror="this.style.display='none'" />
+                                            </div>
+                                            
+                                            <h3 class="text-lg md:text-xl font-bold text-gray-900 leading-tight" set:html={item.title}></h3>
+                                        </div>
+
+                                        <ul class="list-disc pl-14 pr-2 text-sm md:text-base text-gray-700 space-y-2 marker:text-gray-400">
+                                            {item.bullets.map((bullet) => (
+                                                <li>{bullet}</li>
+                                            ))}
+                                        </ul>
+
+                                    </div>
+                                ))}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	</div>
+    
+    
+
+    <div class="bg-[#ff4d4f] text-white text-center py-5 px-4 shadow-inner">
+        <h2 class="text-lg md:text-2xl font-bold">
+            รัฐธรรมนูญ 2560 มีโครงสร้างที่เป็นอุปสรรคต่อประชาธิปไตยและการมีส่วนร่วมของประชาชน
+        </h2>
+    </div>
+
+</div>
