@@ -1,0 +1,81 @@
+---
+// ข้อมูลด่านหิน 3 ชั้น
+const roadblocks = [
+    {
+        step: "ด่านที่ 1",
+        title: "เสียง สว. 1 ใน 3",
+        description: "รับหลักการวาระ 1 และเห็นชอบวาระ 3<br/>ต้องมี สว. เห็นชอบด้วย<br/><strong class='text-gray-800'>อย่างน้อย 1 ใน 3 หรือ 67 คน</strong>",
+        bgBadge: "bg-[#e9af13]",      // สีเหลืองทอง
+        textTitle: "text-[#e9af13]",
+        borderColor: "border-[#e9af13]"
+    },
+    {
+        step: "ด่านที่ 2",
+        title: "ศาลรัฐธรรมนูญ",
+        description: "ศาลมีอำนาจวินิจฉัยว่าการแก้ไข<br/>ขัดต่อรัฐธรรมนูญหรือไม่<br/>สามารถ<strong class='text-gray-800'>ตีความเพื่อขัดขวาง</strong><br/>การแก้ รธน. ได้",
+        bgBadge: "bg-[#fa5a5a]",      // สีแดง
+        textTitle: "text-[#fa5a5a]",
+        borderColor: "border-[#fa5a5a]"
+    },
+    {
+        step: "ด่านที่ 3",
+        title: "ประชามติ 2 ชั้น",
+        description: "ต้องผ่านประชามติจากประชาชน<br/>ซึ่งมีเงื่อนไข <strong class='text-gray-800'>Double Majority</strong><br/>ทำให้ผ่านได้ยากมาก",
+        bgBadge: "bg-[#2e4394]",      // สีน้ำเงิน
+        textTitle: "text-[#2e4394]",
+        borderColor: "border-[#2e4394]"
+    }
+];
+---
+
+<div class="w-full bg-[#faf9f6] py-16 px-4 font-sans">
+    <div class="max-w-6xl mx-auto">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 leading-tight">
+                รัฐธรรมนูญ 2560 ที่มีปัญหา<br class="hidden md:block" />
+                ถูกปกป้องด้วย <span class="text-[#fa5a5a]">"ด่านหิน 3 ชั้น"</span>
+            </h2>
+            <p class="text-gray-600 text-sm md:text-base">
+                (ในการแก้ไขมาตรา 256 เพื่อเปิดทางไปสู่การร่างรัฐธรรมนูญใหม่)
+            </p>
+        </div>
+
+        <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 md:grid md:grid-cols-3 md:gap-8 pb-8 pt-4 px-2">
+            
+            {roadblocks.map((item, index) => (
+                <div class={`snap-center shrink-0 w-[85%] sm:w-[320px] md:w-auto md:flex-1 relative bg-white rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border-b-[6px] ${item.borderColor} flex flex-col items-center p-8 pt-12`}>
+                    
+                    <div class={`absolute -top-5 left-1/2 -translate-x-1/2 ${item.bgBadge} text-white font-bold py-2 px-8 rounded-full shadow-md whitespace-nowrap text-base md:text-lg tracking-wide`}>
+                        {item.step}
+                    </div>
+
+                    <div class="mb-5 mt-2">
+                        <div class={`w-20 h-20 rounded-full flex items-center justify-center bg-gray-50 border-[3px] border-gray-100 shadow-inner`}>
+                             <span class={`text-4xl font-black ${item.textTitle}`}>{index + 1}</span>
+                        </div>
+                    </div>
+
+                    <h3 class={`text-xl md:text-2xl font-bold mb-4 ${item.textTitle} text-center`}>
+                        {item.title}
+                    </h3>
+
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed text-center" set:html={item.description}></p>
+                    
+                </div>
+            ))}
+
+        </div>
+    </div>
+</div>
+
+<style>
+    /* CSS สำหรับซ่อน Scrollbar แต่ยังให้ใช้นิ้วปัดเลื่อน (Swipe) ได้ตามปกติ */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>

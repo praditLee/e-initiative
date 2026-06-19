@@ -1,0 +1,102 @@
+---
+// ข้อมูลด่านหิน 3 ชั้น
+const roadblocks = [
+    {
+        icon: "/images/people_plus.png",
+        title: "ใครเสนอแก้ไขได้บ้าง",
+        description: "กำหนดขอบเขตว่าใครสามารถเสนอให้มีการแก้ไขรัฐธรรมนูญได้บ้าง",
+        bgBadge: "bg-[#e9af13]",      // สีเหลืองทอง
+        textTitle: "text-[#e9af13]",
+        borderColor: "border-[#e9af13]"
+    },
+    {
+        icon: "/images/gear.png",
+        title: "วิธีการและเงื่อนไข",
+        description: "กำหนดหลักเกณฑ์ ขั้นตอน และเงื่อนไขต่างๆ ที่ต้องปฏิบัติเพื่อให้การแก้ไขมีผลบังคับใช้<br/>หนึ่งในเงื่อนไขสำคัญคือ<strong class='text-gray-800'>กรอบเนื้อหา</strong><br/>ในการร่างรัฐธรรมนูญ",
+        bgBadge: "bg-[#fa5a5a]",      // สีแดง
+        textTitle: "text-[#fa5a5a]",
+        borderColor: "border-[#fa5a5a]"
+    },
+    {
+        icon: "/images/three_people.png",
+        title: "ที่มาของคนร่าง (สสร.)",
+        description: "กำหนดว่าคนร่างรัฐธรรมนูญใหม่ จะมีที่มาจากที่ไหน<br/><strong class='text-gray-800 text-xs'>(สสร. - สมาชิกสภาร่างรัฐธรรมนูญ)</strong>",
+        bgBadge: "bg-[#2e4394]",      // สีน้ำเงิน
+        textTitle: "text-[#2e4394]",
+        borderColor: "border-[#2e4394]"
+    }
+];
+---
+<header
+			class="relative w-full h-[200px] bg-scroll md:bg-fixed bg-center bg-cover flex items-center justify-center"
+			style="background-image: url('/images/democracy_monument_inv.webp');"
+			>
+			<div class="absolute inset-0 bg-yellow-500/90"></div>
+
+			<div class="relative z-10 text-center px-6">
+				<img src="/images/whatis256_h.svg" class="max-w-[250px] md:max-w-[850px]" />
+			</div>
+</header>
+<div class="w-full bg-[#faf9f6] py-16 px-4 font-sans">
+   
+    <div class="relative z-10 max-w-6xl mx-auto">
+
+        
+        
+        <div class="text-center mb-16">
+            <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 leading-tight">
+                มาตรา 256<br class="hidden md:block" />
+                กติกา <span class="text-[#fa5a5a]">"วิธีแก้ไขรัฐธรรมนูญ"</span>
+            </h2>
+        </div>
+
+        <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 md:grid md:grid-cols-3 md:gap-8 pb-8 pt-4 px-2">
+            
+            {roadblocks.map((item, index) => (
+                <div class={`snap-center shrink-0 w-[85%] sm:w-[320px] md:w-auto md:flex-1 relative bg-white rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border-b-[6px] ${item.borderColor} flex flex-col items-center p-8 pt-12`}>
+
+                    <div class="mb-5 mt-2">
+                        <div class={`w-20 h-20 rounded-full flex items-center justify-center`}>
+                             <img src=`${item.icon}` class="w-12 h-auto" />
+                        </div>
+                    </div>
+
+                    <h3 class={`text-xl md:text-2xl font-bold mb-4 ${item.textTitle} text-center`}>
+                        {item.title}
+                    </h3>
+
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed text-center" set:html={item.description}></p>
+                    
+                </div>
+            ))}
+
+        </div>
+    </div>
+</div>
+<div
+        class="relative w-full h-[200px] bg-scroll md:bg-fixed bg-center bg-cover flex items-center justify-center"
+        style="background-image: url('/images/act2_crossroad.webp');"
+        >
+        <div class="absolute inset-0 bg-[#ff4d4f]/80"></div>
+
+        <div class="relative z-10 text-center max-w-6xl px-6">
+            <h3
+            class="text-xl md:text-3xl font-bold text-white mb-4 drop-shadow-lg"
+            >
+            มาตรา 256 คือ "กติกาที่บอกวิธีแก้กติกา" เป็นประตูบานแรกที่เราต้องเปิดเพื่อตั้งคนมาเขียนรัฐธรรมนูญใหม่
+            </h3>
+        </div>
+    </div>
+    
+
+</div>
+<style>
+    /* CSS สำหรับซ่อน Scrollbar แต่ยังให้ใช้นิ้วปัดเลื่อน (Swipe) ได้ตามปกติ */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>

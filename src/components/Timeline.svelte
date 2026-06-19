@@ -87,10 +87,21 @@
 
         </div>
     </div>
+<div
+        class="relative w-full h-[200px] bg-scroll md:bg-fixed bg-center bg-cover flex items-center justify-center"
+        style="background-image: url('/images/act2_crossroad.webp');"
+        >
+        <div class="absolute inset-0 bg-[#ff4d4f]/80"></div>
 
-    <div class="bg-[#fa5a5a] p-4 text-white text-center font-medium text-sm md:text-base">
-        แม้จะมีประชามติเห็นชอบถึง 60.16% แต่เส้นทางสู่ รธน. ใหม่ยังเผชิญกับอุปสรรคทั้งจากเสียง สว. และข้อจำกัดทางกฎหมายเรื่องที่มาของ สสร.
+        <div class="relative z-10 text-center max-w-6xl px-6">
+            <h3
+            class="text-xl md:text-3xl font-bold text-white mb-4 drop-shadow-lg"
+            >
+            แม้จะมีประชามติเห็นชอบถึง 60.16% แต่เส้นทางสู่ รธน. ใหม่ยังเผชิญกับอุปสรรคทั้งจากเสียง สว. และข้อจำกัดทางกฎหมายเรื่องที่มาของ สสร.
+            </h3>
+        </div>
     </div>
+    
 
 </div>
 

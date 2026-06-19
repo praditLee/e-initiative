@@ -15,6 +15,7 @@ import ConstTimeline from '../components/present/ConstTimeline.astro';
 import VolunteerSection from '../components/index/VolunteerSection.astro';
 import Timeline from '../components/Timeline.svelte';
 import ConstitutionFlaws from '../components/present/ConstitutionFlaws.astro'
+import WhatIs256 from '../components/present/WhatIs256.astro'
 ---
 
 <Body>
@@ -34,7 +35,9 @@ import ConstitutionFlaws from '../components/present/ConstitutionFlaws.astro'
 		<ConstSituation />
 		
 		<ConstitutionFlaws />
+		
 		<Timeline client:visible />
+		<WhatIs256 />
 		<ProposalTable />
 		<section
 			class="relative w-full h-[400px] bg-scroll md:bg-fixed bg-center bg-cover flex items-center justify-center"
