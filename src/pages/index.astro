@@ -16,6 +16,7 @@ import VolunteerSection from '../components/index/VolunteerSection.astro';
 import Timeline from '../components/Timeline.svelte';
 import ConstitutionFlaws from '../components/present/ConstitutionFlaws.astro'
 import WhatIs256 from '../components/present/WhatIs256.astro'
+import TimelineEdit256 from '../components/present/TimelineEdit256.astro';
 ---
 
 <Body>
@@ -39,6 +40,7 @@ import WhatIs256 from '../components/present/WhatIs256.astro'
 		<Timeline client:visible />
 		<WhatIs256 />
 		<ProposalTable />
+		<TimelineEdit256 />
 		<section
 			class="relative w-full h-[400px] bg-scroll md:bg-fixed bg-center bg-cover flex items-center justify-center"
 			style="background-image: url('/images/question.webp');"
