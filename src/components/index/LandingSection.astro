@@ -38,20 +38,20 @@ import Sharer from '../Sharer.svelte';
 		</p> -->
 
 		<div class="flex flex-col gap-2">
-			<div>
+			<!-- <div>
 				<p class="heading-responsive-01">
     			พร้อมโหวตโนแล้ว<br /> <span id="realtime-count" class="font-bold text-5xl">...</span> คน
 				</p>
-					<!-- <p>
+					<p>
 						{dayElapsed > 0 && <>เหลือเวลาอีก {dayElapsed} วัน</>}
 						(ภายใน {
 							Config.petition.endDate.toLocaleDateString('TH-th', {
 								dateStyle: 'medium',
 							})
 						})
-					</p> -->
-			</div>
-			<UpdateTimestamp client:load date={new Date()} />
+					</p>
+			</div> -->
+			<!-- <UpdateTimestamp client:load date={new Date()} /> -->
 			{
 				isCampaignEnded ? (
 					<div class="flex flex-row items-center gap-2">
@@ -60,17 +60,17 @@ import Sharer from '../Sharer.svelte';
 						<div class="h-[2px] flex-1 bg-secondary" />
 					</div>
 				) : (
-					<a
-							href="#sign"
-							class="heading-03 btn btn-primary btn-block text-base-100"
-						>
-							ลงชื่อร่วมแสดงจุดยืน
-							<PenIcon />
-						</a>
-						<div class="divider" />
+					// <a
+					// 		href="#sign"
+					// 		class="heading-03 btn btn-primary btn-block text-base-100"
+					// 	>
+					// 		ลงชื่อร่วมแสดงจุดยืน
+					// 		<PenIcon />
+					// 	</a>
+					// 	<div class="divider" />
 					<div class="space-y-2">
 						<a
-							href="https://conforall.com/"
+							href="https://conforall.com/#sign"
 							target="_blank"
 							class="heading-02 btn btn-block bg-[#30D36C] text-[#2301A4] border border-black hover:bg-green-600"
 						>
